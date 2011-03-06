@@ -5,12 +5,20 @@ var assets;
 var filteredAssets;
 var artists;
 var media;
+var themes;
+var periods;
+var origins;
+var collections;
 
 var _booksLoaded = false;
 var _chaptersLoaded = false;
 var _assetsLoaded = false;
 var _artistsLoaded = false;
 var _mediaLoaded = false;
+var _themesLoaded = false;
+var _periodsLoaded = false;
+var _originsLoaded = false;
+var _collectionsLoaded = false;
 var _loadTimer;
 
 var thumbPath = "/asset/thumb";
@@ -96,15 +104,23 @@ function loadData() {
     filteredAssets = ko.observableArray([]);
     artists = ko.observableArray([]);
     media = ko.observableArray([]);
+    themes = ko.observableArray([]);
+    periods = ko.observableArray([]);
+    origins = ko.observableArray([]);
+    collections = ko.observableArray([]);
 
     loadBooks();
     loadArtists();
     loadChapters();
     loadImages();
     loadMedia();
+    loadThemes();
+    loadPeriods();
+    loadOrigins();
+    loadCollections();
 
     _loadTimer = setInterval(function () {
-        if (_booksLoaded && _chaptersLoaded && _assetsLoaded && _artistsLoaded && _mediaLoaded) {
+        if (_booksLoaded && _chaptersLoaded && _assetsLoaded && _artistsLoaded && _mediaLoaded && _themesLoaded && _periodsLoaded && _originsLoaded && _collectionsLoaded) {
             clearInterval(_loadTimer);
             consolidate();
             filteredAssets(chapters()[0].assets());
@@ -142,7 +158,7 @@ function loadImages() {
 function loadArtists() {
     $.getJSON("/Data/Artists", null, function(data) {
         $.each(data, function(i, el) {
-            artists.push(el);
+            artists.push(el || "");
         });
         _artistsLoaded = true;
     });
@@ -156,6 +172,42 @@ function loadMedia() {
         _mediaLoaded = true;
     });
 }
+
+function loadThemes() {
+    $.getJSON("/Data/Themes", null, function (data) {
+        $.each(data, function (i, el) {
+            themes.push(el || "");
+        });
+        _themesLoaded = true;
+    });
+}
+
+function loadPeriods() {
+    $.getJSON("/Data/Periods", null, function (data) {
+        $.each(data, function (i, el) {
+            periods.push(el || "");
+        });
+        _periodsLoaded = true;
+    });
+}
+
+function loadOrigins() {
+    $.getJSON("/Data/Origins", null, function (data) {
+        $.each(data, function (i, el) {
+            origins.push(el || "");
+        });
+        _originsLoaded = true;
+    });
+}
+
+function loadCollections() {
+    $.getJSON("/Data/Collections", null, function (data) {
+        $.each(data, function (i, el) {
+            collections.push(el || "");
+        });
+        _collectionsLoaded = true;
+    });
+}     
 
 function setBehaviors() {
 
@@ -189,7 +241,7 @@ function setBehaviors() {
         selectedAsset(assetPlaceholder());
         $("#edit-asset").find(".feedback").hide();
         $("#edit-asset input:text input:hidden").val("");
-        $("#edit-asset").dialog({ modal: true, width: 885, top: 10, closeOnEscape: true, resizable: false });
+        $("#edit-asset").dialog({ modal: true, width: 885, height: 700, top: 0, closeOnEscape: true, resizable: false, draggable: false });
         $("#edit-asset form").scrollTop(0);
         return false;
     });
@@ -204,8 +256,24 @@ function setBehaviors() {
             ko.applyBindings(artists);
         }
         else if ($("#browse-types").val() == "medium") {
-        $("#browse-options").attr("data-bind", "options: media");
-        ko.applyBindings(media);
+            $("#browse-options").attr("data-bind", "options: media");
+            ko.applyBindings(media);
+        }
+        else if ($("#browse-types").val() == "theme") {
+            $("#browse-options").attr("data-bind", "options: themes");
+            ko.applyBindings(media);
+        }
+        else if ($("#browse-types").val() == "period") {
+            $("#browse-options").attr("data-bind", "options: periods");
+            ko.applyBindings(media);
+        }
+        else if ($("#browse-types").val() == "origin") {
+            $("#browse-options").attr("data-bind", "options: origins");
+            ko.applyBindings(media);
+        }
+        else if ($("#browse-types").val() == "collection") {
+            $("#browse-options").attr("data-bind", "options: collections");
+            ko.applyBindings(media);
         }
         findAssets($("#browse-types").val(), $("#browse-options").val());
     });
@@ -257,20 +325,19 @@ function setBehaviors() {
 
         var zoom = $("#image-detail");
         var a = $("<a></a>").attr("href", "/Media/Images/" + asset.id() + ".jpg");
-        var img = $("<img />").attr("src", "/Asset/Thumb?id=" + asset.id() + "&width=270&height=270").attr("width", "270");
+        var img = $("<img />").attr("src", "/Asset/Thumb?id=" + asset.id() + "&width=480").attr("width", "480");
 
         img.appendTo(a);
         zoom.children().remove();
         zoom.append(a);
 
         a.jqzoom({
-            position: "right",
-            offsetY: 0,
-            offsetX: 20,
+            position: "left",
+          
             title: false
         });
 
-        $("#edit-asset").dialog({ modal: true, closeOnEscape: true, width: 885, top: 10, resizable: false });
+        $("#edit-asset").dialog({ modal: true, closeOnEscape: true, width: 885, height: 700, top: 0, resizable: false, draggable: false });
         $("#edit-asset form").scrollTop(0);
     });
 

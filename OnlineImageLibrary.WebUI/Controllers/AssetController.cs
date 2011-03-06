@@ -61,19 +61,19 @@ namespace OnlineImageLibrary.WebUI.Controllers
             return new { success = imagesRepository.SaveImage(image), assetID = image.ImageID };
         }
 
-        public ActionResult Thumb(int id, int width, int height)
+        public ActionResult Thumb(int id, int width)
         {
             System.Drawing.Image i = null;
 
             try
             {
                 i = System.Drawing.Image.FromFile(Server.MapPath("/") + ConfigurationManager.AppSettings["uploadPath"].ToString() + "/" + id.ToString() + ".jpg");
-                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, width, height);
+                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, width);
             }
             catch (Exception ex)
             {
-                i = new Bitmap(1, 1);
-                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, 1, 1);
+                i = new Bitmap(width, width);
+                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, width);
             }
             finally
             {
