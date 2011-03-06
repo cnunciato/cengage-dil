@@ -246,36 +246,38 @@ function setBehaviors() {
         return false;
     });
 
-    $("#browse-types").change(function() {
-        if ($("#browse-types").val() == "chapter") {
+    $("#browse-types").change(function () {
+        var sel = $("#browse-types").val();
+
+        if (sel == "chapter") {
             $("#browse-options").attr("data-bind", "options: chapters, optionsText: 'title', optionsValue: 'id'");
             ko.applyBindings(chapters);
         }
-        else if ($("#browse-types").val() == "artist") {
+        else if (sel == "artist") {
             $("#browse-options").attr("data-bind", "options: artists");
             ko.applyBindings(artists);
         }
-        else if ($("#browse-types").val() == "medium") {
+        else if (sel == "medium") {
             $("#browse-options").attr("data-bind", "options: media");
             ko.applyBindings(media);
         }
-        else if ($("#browse-types").val() == "theme") {
+        else if (sel == "theme") {
             $("#browse-options").attr("data-bind", "options: themes");
-            ko.applyBindings(media);
+            ko.applyBindings(themes);
         }
-        else if ($("#browse-types").val() == "period") {
+        else if (sel == "period") {
             $("#browse-options").attr("data-bind", "options: periods");
-            ko.applyBindings(media);
+            ko.applyBindings(periods);
         }
-        else if ($("#browse-types").val() == "origin") {
+        else if (sel == "origin") {
             $("#browse-options").attr("data-bind", "options: origins");
-            ko.applyBindings(media);
+            ko.applyBindings(origins);
         }
-        else if ($("#browse-types").val() == "collection") {
+        else if (sel == "collection") {
             $("#browse-options").attr("data-bind", "options: collections");
-            ko.applyBindings(media);
+            ko.applyBindings(collections);
         }
-        findAssets($("#browse-types").val(), $("#browse-options").val());
+        findAssets(sel, $("#browse-options").val());
     });
     
     $("#browse-options").change(function() {
@@ -494,6 +496,34 @@ function findAssets(filterType, criteria) {
     else if (filterType == "medium") {
         $.each(assets(), function(j, asset) {
             if (asset.medium() == criteria) {
+                filteredAssets.push(asset);
+            }
+        });
+    }
+    else if (filterType == "period") {
+        $.each(assets(), function (j, asset) {
+            if (asset.period() == criteria) {
+                filteredAssets.push(asset);
+            }
+        });
+    }
+    else if (filterType == "theme") {
+        $.each(assets(), function (j, asset) {
+            if (asset.theme() == criteria) {
+                filteredAssets.push(asset);
+            }
+        });
+    }
+    else if (filterType == "origin") {
+        $.each(assets(), function (j, asset) {
+            if (asset.origin() == criteria) {
+                filteredAssets.push(asset);
+            }
+        });
+    }
+    else if (filterType == "collection") {
+        $.each(assets(), function (j, asset) {
+            if (asset.colletion() == criteria) {
                 filteredAssets.push(asset);
             }
         });

@@ -18,10 +18,10 @@
                 <option id="by-theme" value="theme">Theme</option>
                 <option id="by-artist" value="artist">Artist</option>
                 <option id="by-medium" value="medium">Medium</option>
-                <option id="by-period" value="artist">Period</option>
-                <option id="by-origin" value="artist">Origin</option>
-                <option id="by-collection" value="artist">Collection</option>
-                <option id="by-new" value="artist">New</option>
+                <option id="by-period" value="period">Period</option>
+                <option id="by-origin" value="origin">Origin</option>
+                <option id="by-collection" value="collection">Collection</option>
+                <!--<option id="by-new" value="artist">New</option>-->
             </select>
             <select id="browse-options"></select>
         </div>
