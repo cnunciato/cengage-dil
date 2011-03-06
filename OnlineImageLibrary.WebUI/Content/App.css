@@ -105,6 +105,7 @@ div#filter .item {
 #results {
     overflow: auto;
     margin: 0 0 0 288px;
+    width: 710px;
 }
 
 .delete-button 
