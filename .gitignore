@@ -2,3 +2,4 @@ OnlineImageLibrary.WebUI/Media/Images/*.jpg
 OnlineImageLibrary.WebUI/OnlineImageLibrary.WebUI.csproj.user
 OnlineImageLibrary.WebUI/Web.config
 OnlineImageLibrary.suo
+OnlineImageLibrary/*/obj
