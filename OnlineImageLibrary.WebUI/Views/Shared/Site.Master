@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="Stylesheet" href="/Content/App.css" />
+    <link rel="Stylesheet" href="/Content/Theme/redmond/jquery-ui-1.8.7.custom.css" />
+    <link rel="Stylesheet" href="/Content/jqzoom.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Framework/jquery-ui-1.8.7.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Framework/jquery.tmpl.js"></script>
+    <script type="text/javascript" src="/Scripts/Framework/knockout-1.1.1.js"></script>
+    <script type="text/javascript" src="/Scripts/Framework/jquery.jqzoom1.0.1.js"></script>
+    <script type="text/javascript" src="/Scripts/Framework/cookie.js"></script>
+    <script type="text/javascript" src="/Scripts/App.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a id="login" href="/Authentication/Login">Administrators, please log in</a>
+            <a id="upload" href="/Authentication/Login">Upload</a>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div id="footer">
+            
+        </div>
+    </div>   
+    <div id="auth" class="dialog" title="Please Log In">
+        <div class="feedback ui-state-error ui-corner-all">
+            <p><span class="ui-icon ui-icon-alert"></span><span class="message"></span></p>
+        </div>
+        <input class="password" type="password" name="password" />
+    </div>
+    <div id="edit-asset" class="dialog" title="Edit an Asset">
+        <% Html.RenderPartial("EditImage"); %>
+    </div>
+    <div id="advanced-search" class="dialog" title="Advanced Search">
+    
+    </div>
+    <div id="detail" class="dialog" title="Asset Detail">
+        
+    </div>
+</body>
+</html>
