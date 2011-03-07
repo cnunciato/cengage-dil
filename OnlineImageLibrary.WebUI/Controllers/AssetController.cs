@@ -71,6 +71,26 @@ namespace OnlineImageLibrary.WebUI.Controllers
             finally
             {
                 if (i != null) i.Dispose();
+            }   
+        }
+
+        public ActionResult Crop(int id, int x, int y, int width, int height)
+        {
+            System.Drawing.Image i = null;
+
+            try
+            {
+                i = System.Drawing.Image.FromFile(Server.MapPath("/") + ConfigurationManager.AppSettings["uploadPath"].ToString() + "/" + id.ToString() + ".jpg");
+                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, x, y, width, height);
+            }
+            catch (Exception ex)
+            {
+                i = new Bitmap(width, height);
+                return new OnlineImageLibrary.WebUI.Models.ImageResult(i, width);
+            }
+            finally
+            {
+                if (i != null) i.Dispose();
             }
         }
 
