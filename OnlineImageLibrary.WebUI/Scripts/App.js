@@ -523,7 +523,7 @@ function findAssets(filterType, criteria) {
     }
     else if (filterType == "collection") {
         $.each(assets(), function (j, asset) {
-            if (asset.colletion() == criteria) {
+            if (asset.collection() == criteria) {
                 filteredAssets.push(asset);
             }
         });
