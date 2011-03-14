@@ -62,7 +62,7 @@ namespace OnlineImageLibrary.WebUI.Controllers
 
         public JsonResult Collections()
         {
-            return Json(new SQLImagesRepository(ConfigurationManager.ConnectionStrings["appDB"].ConnectionString).Images.GroupBy(a => a.Collection).Distinct().ToArray(), JsonRequestBehavior.AllowGet);
+            return Json(new SQLImagesRepository(ConfigurationManager.ConnectionStrings["appDB"].ConnectionString).Images.Select(a => a.Collection).Distinct().ToArray(), JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult New()
