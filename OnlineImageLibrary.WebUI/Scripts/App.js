@@ -9,6 +9,7 @@ var themes;
 var periods;
 var origins;
 var collections;
+var token = null;
 
 var _booksLoaded = false;
 var _chaptersLoaded = false;
@@ -76,17 +77,22 @@ function findChapter(id) {
     }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     clearForms();
     setBehaviors();
     loadData();
 
+    token = ko.observable();
+    $("#upload").attr("data-bind", "visible: token() != null");
+    $("#login").attr("data-bind", "visible: token() == null");
+    
     ko.applyBindings(books);
     ko.applyBindings(chapters);
     ko.applyBindings(assets);
     ko.applyBindings(filteredAssets);
     ko.applyBindings(artists);
     ko.applyBindings(media);
+    ko.applyBindings(token);
     ko.applyBindings(selectedAsset);
 });
 
@@ -224,7 +230,7 @@ function setBehaviors() {
         $("#auth").dialog({ modal: true, closeOnEscape: true, buttons: { "Cancel": function() { $(this).dialog("close"); }, "Submit": function() {
             $.post("/Authentication/Login", { password: $("#auth .password").val() }, function(data) {
                 if (data && data.authenticated) {
-                    token = data.token;
+                    token(data.token);
                     $("#auth").dialog("close");
                 }
                 else {
@@ -250,7 +256,7 @@ function setBehaviors() {
         var sel = $("#browse-types").val();
 
         if (sel == "chapter") {
-            $("#browse-options").attr("data-bind", "options: chapters, optionsText: 'title', optionsValue: 'id'");
+            $("#browse-options").attr("data-bind", "    ");
             ko.applyBindings(chapters);
         }
         else if (sel == "artist") {
@@ -352,21 +358,21 @@ function setBehaviors() {
     $(".delete-button").live("click", function (event) { event.stopImmediatePropagation(); del($(this).parent().data("asset")); });
 
     $("#ImageID").attr("data-bind", "value: selectedAsset().id");
-    $("#ChapterID").attr("data-bind", "options: chapters, optionsText: 'title', optionsValue: 'id'");
-    $("#Title").attr("data-bind", "value: selectedAsset().title");
-    $("#Artist").attr("data-bind", "value: selectedAsset().artist");
-    $("#Date").attr("data-bind", "value: selectedAsset().date");
-    $("#Medium").attr("data-bind", "value: selectedAsset().medium");
-    $("#Size").attr("data-bind", "value: selectedAsset().size");
-    $("#Credits").attr("data-bind", "value: selectedAsset().credits");
-    $("#Description").attr("data-bind", "value: selectedAsset().description");
-    $("#Theme").attr("data-bind", "value: selectedAsset().theme");
-    $("#Period").attr("data-bind", "value: selectedAsset().period");
-    $("#Origin").attr("data-bind", "value: selectedAsset().origin");
-    $("#Collection").attr("data-bind", "value: selectedAsset().collection");
-    $("#IsNew").attr("data-bind", "checked: selectedAsset().isnew");
-    $("#Figure").attr("data-bind", "value: selectedAsset().figure");
-    $("#Keywords").attr("data-bind", "value: selectedAsset().keywords");
+    $("#ChapterID").attr("data-bind", "options: chapters, optionsText: 'title', optionsValue: 'id', visible: token() != null"); //.after($("<div></div>").attr("data-bind", "text: selectedAsset().title, visible: token() == null").addClass("editor-static"));
+    $("#Title").attr("data-bind", "value: selectedAsset().title, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().title, visible: token() == null").addClass("editor-static"));
+    $("#Artist").attr("data-bind", "value: selectedAsset().artist, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().artist, visible: token() == null").addClass("editor-static"));
+    $("#Date").attr("data-bind", "value: selectedAsset().date, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().date, visible: token() == null").addClass("editor-static"));
+    $("#Medium").attr("data-bind", "value: selectedAsset().medium, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().medium, visible: token() == null").addClass("editor-static"));
+    $("#Size").attr("data-bind", "value: selectedAsset().size, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().size, visible: token() == null").addClass("editor-static"));
+    $("#Credits").attr("data-bind", "value: selectedAsset().credits, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().credits, visible: token() == null").addClass("editor-static"));
+    $("#Description").attr("data-bind", "value: selectedAsset().description, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().description, visible: token() == null").addClass("editor-static"));
+    $("#Theme").attr("data-bind", "value: selectedAsset().theme, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().theme, visible: token() == null").addClass("editor-static"));
+    $("#Period").attr("data-bind", "value: selectedAsset().period, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().period, visible: token() == null").addClass("editor-static"));
+    $("#Origin").attr("data-bind", "value: selectedAsset().origin, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().origin, visible: token() == null").addClass("editor-static"));
+    $("#Collection").attr("data-bind", "value: selectedAsset().collection, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().collection, visible: token() == null").addClass("editor-static"));
+    $("#IsNew").attr("data-bind", "checked: selectedAsset().isnew, visible: token() != null");
+    $("#Figure").attr("data-bind", "value: selectedAsset().figure, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().figure, visible: token() == null").addClass("editor-static"));
+    $("#Keywords").attr("data-bind", "value: selectedAsset().keywords, visible: token() != null").after($("<div></div>").attr("data-bind", "text: selectedAsset().keywords, visible: token() == null").addClass("editor-static"));
     $("#export li").attr("data-bind", "css: {opacity: filteredAssets().length == 0 ? 0.5 : 1}");
     $("#browse-options").attr("data-bind", "options: chapters, optionsText: 'title', optionsValue: 'id'");
     $("#image-detail").attr("data-bind", "visible: selectedAsset().id() != 0");

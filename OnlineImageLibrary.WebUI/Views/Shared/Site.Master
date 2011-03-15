@@ -19,7 +19,7 @@
 <body>
     <div id="container">
         <div id="header">
-            <a id="login" href="/Authentication/Login">Administrators, please log in</a>
+            <a id="login" href="/Authentication/Login">Administrators</a>
             <a id="upload" href="/Authentication/Login">Upload</a>
         </div>
         <div id="content">
