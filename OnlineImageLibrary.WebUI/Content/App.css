@@ -1,4 +1,4 @@
-body {
+                    body {
     font-family: Lucida Grande, Lucida Sans, Arial, Helvetica;
     font-size: 0.8em;
     line-height: 1.1em;
@@ -217,7 +217,7 @@ div#filter .item {
     overflow: hidden;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    display: inline-block;
+    float: left;
     vertical-align: top;
     border: solid 1px #ccc;
     margin: 0 8px 8px 0;
@@ -302,6 +302,7 @@ div#filter .item {
 {
     width: 490px;  
     float: left;  
+    border: 0;
 }
 
 #edit-asset form

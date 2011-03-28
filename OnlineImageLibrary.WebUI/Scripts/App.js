@@ -84,6 +84,7 @@ $(document).ready(function () {
 
     token = ko.observable();
     $("#upload").attr("data-bind", "visible: token() != null");
+    $("#AssetUploader").attr("data-bind", "visible: token() != null");
     $("#login").attr("data-bind", "visible: token() == null");
     
     ko.applyBindings(books);
