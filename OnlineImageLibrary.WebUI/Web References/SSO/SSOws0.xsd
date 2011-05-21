@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="java:com.tl.ssows.parameters" xmlns:tns="http://ws.thomsonlearning.com:80/ssows" xmlns:ns2="java:com.tl.ssows" xmlns:ns3="java:language_builtins.lang" targetNamespace="http://ws.thomsonlearning.com:80/ssows" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=2" namespace="java:com.tl.ssows.parameters" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=3" namespace="java:com.tl.ssows" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=1" namespace="java:language_builtins.lang" />
+  <xs:element name="addGroup" nillable="true" type="tns:AddGroupParameters" />
+  <xs:element name="addGroupResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="addResourceItem" nillable="true" type="tns:AddResourceItemParameters" />
+  <xs:element name="addResourceItemResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="addUniqueMember" nillable="true" type="tns:AddUniqueMemberParameters" />
+  <xs:element name="addUniqueMemberResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="addUser" nillable="true" type="tns:AddUserParameters" />
+  <xs:element name="addUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="deactivateInstructor" nillable="true" type="tns:CrmsParameters" />
+  <xs:element name="deactivateInstructorResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="deleteGroup" nillable="true" type="tns:DeleteGroupParameters" />
+  <xs:element name="deleteGroupResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="deleteUser" nillable="true" type="tns:DeleteUserParameters" />
+  <xs:element name="deleteUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="doesUserExist" nillable="true" type="tns:DoesUserExistParameters" />
+  <xs:element name="doesUserExistResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getDirectGroupMembership" nillable="true" type="tns:GetDirectGroupMembershipParameters" />
+  <xs:element name="getDirectGroupMembershipResponse" nillable="true" type="tns:GetDirectGroupMembershipResult" />
+  <xs:element name="getGroup" nillable="true" type="tns:GetGroupParameters" />
+  <xs:element name="getGroupResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getGroupsProtecting" nillable="true" type="xs:string" />
+  <xs:element name="getGroupsProtectingHostURL" nillable="true" type="tns:GetGroupsProtectingHostURLParameters" />
+  <xs:element name="getGroupsProtectingHostURLResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getGroupsProtectingResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getToken" nillable="true" type="tns:GetTokenParameters" />
+  <xs:element name="getTokenFromGuid" nillable="true" type="tns:GetTokenFromGuidParameters" />
+  <xs:element name="getTokenFromGuidResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getTokenResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getUser" nillable="true" type="tns:GetUserParameters" />
+  <xs:element name="getUserPasswordResetKey" nillable="true" type="tns:PasswordResetKeyParameters" />
+  <xs:element name="getUserPasswordResetKeyResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getUsers" nillable="true" type="tns:GetUsersParameters" />
+  <xs:element name="getUsersResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="getVersionResponse" nillable="true" type="xs:string" />
+  <xs:element name="hasAccessTo" nillable="true" type="tns:HasAccessToParameters" />
+  <xs:element name="hasAccessToResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="isInstructor" nillable="true" type="tns:IsInstructorParameters" />
+  <xs:element name="isInstructorResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="isMemberOf" nillable="true" type="tns:IsMemberOfParameters" />
+  <xs:element name="isMemberOfResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="isUrlProtected" nillable="true" type="tns:IsUrlProtectedParameters" />
+  <xs:element name="isUrlProtectedResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="modifyGroup" nillable="true" type="tns:ModifyGroupParameters" />
+  <xs:element name="modifyGroupResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="modifyUser" nillable="true" type="tns:ModifyUserParameters" />
+  <xs:element name="modifyUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="reactivateInstructor" nillable="true" type="tns:CrmsParameters" />
+  <xs:element name="reactivateInstructorResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="refreshToken" nillable="true" type="tns:RefreshTokenParameters" />
+  <xs:element name="refreshTokenResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="removeResourceItem" nillable="true" type="tns:RemoveResourceItemParameters" />
+  <xs:element name="removeResourceItemResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="removeUniqueMember" nillable="true" type="tns:RemoveUniqueMemberParameters" />
+  <xs:element name="removeUniqueMemberResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="rename" nillable="true" type="tns:RenameParameters" />
+  <xs:element name="renameResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="restrictionAddToUser" nillable="true" type="tns:RestrictionParameters" />
+  <xs:element name="restrictionAddToUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="restrictionRemoveFromUser" nillable="true" type="tns:RestrictionParameters" />
+  <xs:element name="restrictionRemoveFromUserResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="suspendInstructor" nillable="true" type="tns:CrmsParameters" />
+  <xs:element name="suspendInstructorResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="testTimeOut" nillable="true" type="xs:int" />
+  <xs:element name="testTimeOutResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="validateToken" nillable="true" type="xs:string" />
+  <xs:element name="validateTokenResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:element name="validatedInstructor" nillable="true" type="tns:ValidatedInstructorParameters" />
+  <xs:element name="validatedInstructorResponse" nillable="true" type="tns:SSOwsResult" />
+  <xs:complexType name="PasswordResetKeyParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SSOwsResult">
+    <xs:sequence>
+      <xs:element ref="ns2:branchDesignator" />
+      <xs:element minOccurs="0" name="groups" type="ns2:ArrayOfGroups" />
+      <xs:element minOccurs="0" ref="ns2:guid" />
+      <xs:element ref="ns2:resultCode" />
+      <xs:element ref="ns2:resultDescription" />
+      <xs:element ref="ns2:token" />
+      <xs:element ref="ns2:uid" />
+      <xs:element minOccurs="0" ref="ns2:users" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GroupRef">
+    <xs:sequence>
+      <xs:element ref="ns2:cn" />
+      <xs:element ref="ns2:ERightsId" />
+      <xs:element ref="ns2:resourceItems" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfTLPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns2:TLPerson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TLPerson">
+    <xs:sequence>
+      <xs:element ref="ns2:c" />
+      <xs:element ref="ns2:cn" />
+      <xs:element ref="ns2:createTimestamp" />
+      <xs:element ref="ns2:creatorsName" />
+      <xs:element ref="ns2:departmentNumber" />
+      <xs:element ref="ns2:dn" />
+      <xs:element ref="ns2:employeeNumber" />
+      <xs:element ref="ns2:facsimileTelephoneNumber" />
+      <xs:element ref="ns2:givenName" />
+      <xs:element ref="ns2:groups" />
+      <xs:element ref="ns2:guid" />
+      <xs:element ref="ns2:homePhone" />
+      <xs:element ref="ns2:homePostalAddress" />
+      <xs:element ref="ns2:instructor" />
+      <xs:element ref="ns2:l" />
+      <xs:element ref="ns2:mail" />
+      <xs:element ref="ns2:middleInitial" />
+      <xs:element ref="ns2:mobile" />
+      <xs:element ref="ns2:modifiersName" />
+      <xs:element ref="ns2:modifyTimestamp" />
+      <xs:element ref="ns2:orclSecondaryUID" />
+      <xs:element ref="ns2:ou" />
+      <xs:element ref="ns2:pager" />
+      <xs:element ref="ns2:postalCode" />
+      <xs:element ref="ns2:resourceItems" />
+      <xs:element ref="ns2:restrictedUser" />
+      <xs:element ref="ns2:searchBase" />
+      <xs:element ref="ns2:sn" />
+      <xs:element ref="ns2:st" />
+      <xs:element ref="ns2:street" />
+      <xs:element ref="ns2:TLAgeRange" />
+      <xs:element ref="ns2:TLB2BSiteId" />
+      <xs:element ref="ns2:TLCheckPointA" />
+      <xs:element ref="ns2:TLCheckPointQ" />
+      <xs:element ref="ns2:TLCity" />
+      <xs:element ref="ns2:TLCrms8AccountId" />
+      <xs:element ref="ns2:TLCrms8ContactId" />
+      <xs:element ref="ns2:TLCrmsContactId" />
+      <xs:element ref="ns2:TLCrmsValidatedInstructor" />
+      <xs:element ref="ns2:TLErightsId" />
+      <xs:element ref="ns2:TLEveningPhone" />
+      <xs:element ref="ns2:TLGender" />
+      <xs:element ref="ns2:TLInstitutionId" />
+      <xs:element ref="ns2:TLJDEBillTo" />
+      <xs:element ref="ns2:TLJDEShipTo" />
+      <xs:element ref="ns2:TLPWHint" />
+      <xs:element ref="ns2:TLPrefLang" />
+      <xs:element ref="ns2:TLPubcoId" />
+      <xs:element ref="ns2:TLRegion" />
+      <xs:element ref="ns2:TLSchoolAffiliation" />
+      <xs:element ref="ns2:TLSealedMediaUser" />
+      <xs:element ref="ns2:TLSerialNumbers" />
+      <xs:element ref="ns2:TLShipToC" />
+      <xs:element ref="ns2:TLShipToCity" />
+      <xs:element ref="ns2:TLShipToL" />
+      <xs:element ref="ns2:TLShipToPostalAddress" />
+      <xs:element ref="ns2:TLShipToPostalCode" />
+      <xs:element ref="ns2:TLShipToSt" />
+      <xs:element ref="ns2:TLTCCreationDate" />
+      <xs:element ref="ns2:TLTCExpireDate" />
+      <xs:element ref="ns2:TLTCIdCode" />
+      <xs:element ref="ns2:TLTCOriginalZone" />
+      <xs:element ref="ns2:TLTCServices" />
+      <xs:element ref="ns2:TLTCStatus" />
+      <xs:element ref="ns2:TLThomsonNowInstitutionId" />
+      <xs:element ref="ns2:TLUserType" />
+      <xs:element ref="ns2:uid" />
+      <xs:element ref="ns2:userPassword" />
+      <xs:element ref="ns2:workPhone" />
+      <xs:element ref="ns2:TLOptInCengage" />
+      <xs:element ref="ns2:TLOptInIchapters" />
+      <xs:element minOccurs="0" ref="ns2:emailValidated" />
+      <xs:element minOccurs="0" ref="ns2:timeZone" />
+      <xs:element minOccurs="0" ref="ns2:apliaTcAccepted" />
+      <xs:element minOccurs="0" ref="ns2:TLInstitutionName" />
+      <xs:element ref="ns2:pendingInstructor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUserParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:person" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveResourceItemParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:resourceItem" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddGroupParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:group" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrmsParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:tlCrms8ContactId" />
+      <xs:element minOccurs="0" ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RenameParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:newUid" />
+      <xs:element ref="ns1:oldGuid" />
+      <xs:element ref="ns1:oldUid" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteGroupParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:dn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetGroupParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:ERightsId" />
+      <xs:element ref="ns1:getUniqueGroups" />
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTokenFromGuidParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IsUrlProtectedParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:hostNames" />
+      <xs:element ref="ns1:resourceItem" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveUniqueMemberParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetDirectGroupMembershipParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:adminToken" />
+      <xs:element minOccurs="0" ref="ns1:username" />
+      <xs:element minOccurs="0" ref="ns1:guid" />
+      <xs:element minOccurs="0" ref="ns1:userToken" />
+      <xs:element minOccurs="0" ref="ns1:groupName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetDirectGroupMembershipResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="groups" type="ns3:ArrayOfString" />
+      <xs:element ref="ns2:resultCode" />
+      <xs:element ref="ns2:resultDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyGroupParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:group" />
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestrictionParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DoesUserExistParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IsInstructorParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetGroupsProtectingHostURLParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="ns1:hosts" />
+      <xs:element ref="ns1:path" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RefreshTokenParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:adminToken" />
+      <xs:element ref="ns1:userToken" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidatedInstructorParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:adminToken" />
+      <xs:element minOccurs="0" ref="ns1:guid" />
+      <xs:element minOccurs="0" ref="ns1:username" />
+      <xs:element ref="ns1:validatedInstructor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteUserParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:dn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTokenParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:password" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HasAccessToParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:resourceItem" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUsersParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:person" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUniqueMemberParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IsMemberOfParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyUserParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:person" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddResourceItemParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:groupCn" />
+      <xs:element ref="ns1:resourceItem" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

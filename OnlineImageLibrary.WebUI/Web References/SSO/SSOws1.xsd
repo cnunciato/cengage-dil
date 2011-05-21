@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://ws.thomsonlearning.com:80/ssows" xmlns:tns="java:com.tl.ssows" xmlns:ns2="java:language_builtins.lang" targetNamespace="java:com.tl.ssows" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=4" namespace="http://ws.thomsonlearning.com:80/ssows" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=1" namespace="java:language_builtins.lang" />
+  <xs:element name="ERightsId" type="xs:string" />
+  <xs:element name="TLAgeRange" type="xs:string" />
+  <xs:element name="TLB2BSiteId" type="xs:string" />
+  <xs:element name="TLCheckPointA" type="xs:string" />
+  <xs:element name="TLCheckPointQ" type="xs:string" />
+  <xs:element name="TLCity" type="xs:string" />
+  <xs:element name="TLCrms8AccountId" type="xs:string" />
+  <xs:element name="TLCrms8ContactId" type="xs:string" />
+  <xs:element name="TLCrmsContactId" type="xs:string" />
+  <xs:element name="TLCrmsValidatedInstructor" type="xs:boolean" />
+  <xs:element name="TLErightsId" type="xs:string" />
+  <xs:element name="TLEveningPhone" type="xs:string" />
+  <xs:element name="TLGender" type="xs:string" />
+  <xs:element name="TLInstitutionId" type="xs:string" />
+  <xs:element name="TLInstitutionName" type="xs:string" />
+  <xs:element name="TLJDEBillTo" type="xs:string" />
+  <xs:element name="TLJDEShipTo" type="xs:string" />
+  <xs:element name="TLOptInCengage" type="xs:string" />
+  <xs:element name="TLOptInIchapters" type="xs:string" />
+  <xs:element name="TLPWHint" type="xs:string" />
+  <xs:element name="TLPerson" type="ns1:TLPerson" />
+  <xs:element name="TLPrefLang" type="xs:string" />
+  <xs:element name="TLPubcoId" type="xs:string" />
+  <xs:element name="TLRegion" type="xs:string" />
+  <xs:element name="TLSchoolAffiliation" type="xs:string" />
+  <xs:element name="TLSealedMediaUser" type="xs:string" />
+  <xs:element name="TLSerialNumbers" type="xs:string" />
+  <xs:element name="TLShipToC" type="xs:string" />
+  <xs:element name="TLShipToCity" type="xs:string" />
+  <xs:element name="TLShipToL" type="xs:string" />
+  <xs:element name="TLShipToPostalAddress" type="xs:string" />
+  <xs:element name="TLShipToPostalCode" type="xs:string" />
+  <xs:element name="TLShipToSt" type="xs:string" />
+  <xs:element name="TLTCCreationDate" type="xs:string" />
+  <xs:element name="TLTCExpireDate" type="xs:string" />
+  <xs:element name="TLTCIdCode" type="xs:string" />
+  <xs:element name="TLTCOriginalZone" type="xs:string" />
+  <xs:element name="TLTCServices" type="xs:string" />
+  <xs:element name="TLTCStatus" type="xs:string" />
+  <xs:element name="TLThomsonNowInstitutionId" type="xs:string" />
+  <xs:element name="TLUserType" type="xs:string" />
+  <xs:element name="apliaTcAccepted" type="xs:string" />
+  <xs:element name="branchDesignator" type="xs:int" />
+  <xs:element name="c" type="xs:string" />
+  <xs:element name="cn" type="xs:string" />
+  <xs:element name="createTimestamp" type="xs:dateTime" />
+  <xs:element name="creatorsName" type="xs:string" />
+  <xs:element name="departmentNumber" type="xs:string" />
+  <xs:element name="dn" type="xs:string" />
+  <xs:element name="emailValidated" type="xs:string" />
+  <xs:element name="employeeNumber" type="xs:string" />
+  <xs:element name="facsimileTelephoneNumber" type="xs:string" />
+  <xs:element name="givenName" type="xs:string" />
+  <xs:element name="groups" type="ns2:ArrayOfString" />
+  <xs:element name="guid" type="xs:string" />
+  <xs:element name="homePhone" type="xs:string" />
+  <xs:element name="homePostalAddress" type="xs:string" />
+  <xs:element name="instructor" type="xs:boolean" />
+  <xs:element name="l" type="xs:string" />
+  <xs:element name="mail" type="xs:string" />
+  <xs:element name="middleInitial" type="xs:string" />
+  <xs:element name="mobile" type="xs:string" />
+  <xs:element name="modifiersName" type="xs:string" />
+  <xs:element name="modifyTimestamp" type="xs:dateTime" />
+  <xs:element name="orclSecondaryUID" type="xs:string" />
+  <xs:element name="ou" type="xs:string" />
+  <xs:element name="pager" type="xs:string" />
+  <xs:element name="pendingInstructor" type="xs:boolean" />
+  <xs:element name="postalCode" type="xs:string" />
+  <xs:element name="resourceItems" type="ns2:ArrayOfString" />
+  <xs:element name="restrictedUser" type="xs:boolean" />
+  <xs:element name="resultCode" type="xs:int" />
+  <xs:element name="resultDescription" type="xs:string" />
+  <xs:element name="searchBase" type="xs:string" />
+  <xs:element name="sn" type="xs:string" />
+  <xs:element name="st" type="xs:string" />
+  <xs:element name="street" type="xs:string" />
+  <xs:element name="timeZone" type="xs:string" />
+  <xs:element name="token" type="xs:string" />
+  <xs:element name="uid" type="xs:string" />
+  <xs:element name="userPassword" type="xs:string" />
+  <xs:element name="users" type="ns1:ArrayOfTLPerson" />
+  <xs:element name="workPhone" type="xs:string" />
+  <xs:complexType name="ArrayOfGroups">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Groups" type="tns:Groups" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Groups">
+    <xs:sequence>
+      <xs:element form="qualified" name="businessCategory" type="xs:string" />
+      <xs:element form="qualified" name="businessUnit" type="xs:string" />
+      <xs:element form="qualified" name="cn" type="xs:string" />
+      <xs:element form="qualified" name="createTimestamp" type="xs:dateTime" />
+      <xs:element form="qualified" name="creatorsName" type="xs:string" />
+      <xs:element form="qualified" name="description" type="xs:string" />
+      <xs:element form="qualified" name="dn" type="xs:string" />
+      <xs:element form="qualified" name="groupRefs" type="tns:ArrayOfGroupRef" />
+      <xs:element form="qualified" name="groups" type="ns2:ArrayOfString" />
+      <xs:element form="qualified" name="host" type="xs:string" />
+      <xs:element form="qualified" name="modifiersName" type="xs:string" />
+      <xs:element form="qualified" name="modifyTimestamp" type="xs:dateTime" />
+      <xs:element form="qualified" name="numSubordinates" type="xs:string" />
+      <xs:element form="qualified" name="owner" type="xs:string" />
+      <xs:element form="qualified" name="resourceItems" type="ns2:ArrayOfString" />
+      <xs:element form="qualified" name="searchBase" type="xs:string" />
+      <xs:element form="qualified" name="seeAlso" type="xs:string" />
+      <xs:element form="qualified" name="TLErightsId" type="xs:string" />
+      <xs:element form="qualified" name="uniqueGroupMembers" type="ns2:ArrayOfString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGroupRef">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" form="qualified" name="GroupRef" type="ns1:GroupRef" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

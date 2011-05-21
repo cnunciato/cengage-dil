@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://s-ws.cengage.com/olrws/OLRws?xsd=4" filename="OLRws.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://s-ws.cengage.com/olrws/OLRws?xsd=2" filename="OLRws0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://s-ws.cengage.com/olrws/OLRws?WSDL" filename="OLRws.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://s-ws.cengage.com/olrws/OLRws?xsd=1" filename="OLRws1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://s-ws.cengage.com/olrws/OLRws?xsd=3" filename="OLRws2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

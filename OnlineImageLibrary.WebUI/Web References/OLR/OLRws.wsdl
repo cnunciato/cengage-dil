@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.thomsonlearning.com:80/olrws" name="OLRws" targetNamespace="http://ws.thomsonlearning.com:80/olrws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=1" namespace="java:language_builtins.lang" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=2" namespace="java:com.tl.olrws.parameters" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=3" namespace="java:com.tl.olrws" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=4" namespace="http://ws.thomsonlearning.com:80/olrws" />
+    </xsd:schema>
+  </types>
+  <message name="getResource">
+    <part name="getResourceParameters" element="tns:getResource" />
+  </message>
+  <message name="getResourceResponse">
+    <part name="getResourceResponse" element="tns:getResourceResponse" />
+  </message>
+  <message name="rename">
+    <part name="renameParameters" element="tns:rename" />
+  </message>
+  <message name="renameResponse">
+    <part name="renameResponse" element="tns:renameResponse" />
+  </message>
+  <message name="getVersion" />
+  <message name="getVersionResponse">
+    <part name="getVersionResponse" element="tns:getVersionResponse" />
+  </message>
+  <message name="createResource">
+    <part name="createResourceParameters" element="tns:createResource" />
+  </message>
+  <message name="createResourceResponse">
+    <part name="createResourceResponse" element="tns:createResourceResponse" />
+  </message>
+  <message name="getToken">
+    <part name="getTokenParameters" element="tns:getToken" />
+  </message>
+  <message name="getTokenResponse">
+    <part name="getTokenResponse" element="tns:getTokenResponse" />
+  </message>
+  <message name="getComponents">
+    <part name="getComponentsParameters" element="tns:getComponents" />
+  </message>
+  <message name="getComponentsResponse">
+    <part name="getComponentsResponse" element="tns:getComponentsResponse" />
+  </message>
+  <message name="getTitle">
+    <part name="getTitleParameters" element="tns:getTitle" />
+  </message>
+  <message name="getTitleResponse">
+    <part name="getTitleResponse" element="tns:getTitleResponse" />
+  </message>
+  <message name="getProduct">
+    <part name="getProductParameters" element="tns:getProduct" />
+  </message>
+  <message name="getProductResponse">
+    <part name="getProductResponse" element="tns:getProductResponse" />
+  </message>
+  <message name="consumeAccessCode">
+    <part name="consumeAccessCodeParameters" element="tns:consumeAccessCode" />
+  </message>
+  <message name="consumeAccessCodeResponse">
+    <part name="consumeAccessCodeResponse" element="tns:consumeAccessCodeResponse" />
+  </message>
+  <message name="entitleFreeAccess">
+    <part name="entitleFreeAccessParameters" element="tns:entitleFreeAccess" />
+  </message>
+  <message name="entitleFreeAccessResponse">
+    <part name="entitleFreeAccessResponse" element="tns:entitleFreeAccessResponse" />
+  </message>
+  <message name="getAccessCode">
+    <part name="getAccessCodeParameters" element="tns:getAccessCode" />
+  </message>
+  <message name="getAccessCodeResponse">
+    <part name="getAccessCodeResponse" element="tns:getAccessCodeResponse" />
+  </message>
+  <message name="generateAccessCode">
+    <part name="generateAccessCodeParameters" element="tns:generateAccessCode" />
+  </message>
+  <message name="generateAccessCodeResponse">
+    <part name="generateAccessCodeResponse" element="tns:generateAccessCodeResponse" />
+  </message>
+  <message name="resetAccessCode">
+    <part name="resetAccessCodeParameters" element="tns:resetAccessCode" />
+  </message>
+  <message name="resetAccessCodeResponse">
+    <part name="resetAccessCodeResponse" element="tns:resetAccessCodeResponse" />
+  </message>
+  <message name="removeUserEntitlement">
+    <part name="removeUserEntitlementParameters" element="tns:removeUserEntitlement" />
+  </message>
+  <message name="removeUserEntitlementResponse">
+    <part name="removeUserEntitlementResponse" element="tns:removeUserEntitlementResponse" />
+  </message>
+  <message name="getUsersAccessCodeList">
+    <part name="getUsersAccessCodeListParameters" element="tns:getUsersAccessCodeList" />
+  </message>
+  <message name="getUsersAccessCodeListResponse">
+    <part name="getUsersAccessCodeListResponse" element="tns:getUsersAccessCodeListResponse" />
+  </message>
+  <message name="getUsersProductList">
+    <part name="getUsersProductListParameters" element="tns:getUsersProductList" />
+  </message>
+  <message name="getUsersProductListResponse">
+    <part name="getUsersProductListResponse" element="tns:getUsersProductListResponse" />
+  </message>
+  <message name="createProduct">
+    <part name="createProductParameters" element="tns:createProduct" />
+  </message>
+  <message name="createProductResponse">
+    <part name="createProductResponse" element="tns:createProductResponse" />
+  </message>
+  <message name="modifyProduct">
+    <part name="modifyProductParameters" element="tns:modifyProduct" />
+  </message>
+  <message name="modifyProductResponse">
+    <part name="modifyProductResponse" element="tns:modifyProductResponse" />
+  </message>
+  <message name="modifyResource">
+    <part name="modifyResourceParameters" element="tns:modifyResource" />
+  </message>
+  <message name="modifyResourceResponse">
+    <part name="modifyResourceResponse" element="tns:modifyResourceResponse" />
+  </message>
+  <message name="postPhysicalFulfillment">
+    <part name="postPhysicalFulfillmentParameters" element="tns:postPhysicalFulfillment" />
+  </message>
+  <message name="postPhysicalFulfillmentResponse">
+    <part name="postPhysicalFulfillmentResponse" element="tns:postPhysicalFulfillmentResponse" />
+  </message>
+  <message name="getEntitlements">
+    <part name="getEntitlementsParameters" element="tns:getEntitlements" />
+  </message>
+  <message name="getEntitlementsResponse">
+    <part name="getEntitlementsResponse" element="tns:getEntitlementsResponse" />
+  </message>
+  <message name="testTimeOut">
+    <part name="testTimeOutParameters" element="tns:testTimeOut" />
+  </message>
+  <message name="testTimeOutResponse">
+    <part name="testTimeOutResponse" element="tns:testTimeOutResponse" />
+  </message>
+  <message name="getTimeOuts">
+    <part name="getTimeOutsParameters" element="tns:getTimeOuts" />
+  </message>
+  <message name="getTimeOutsResponse">
+    <part name="getTimeOutsResponse" element="tns:getTimeOutsResponse" />
+  </message>
+  <message name="getStudentCompanionSiteURL">
+    <part name="getURLParameters" element="tns:getStudentCompanionSiteURL" />
+  </message>
+  <message name="getStudentCompanionSiteURLResponse">
+    <part name="getStudentCompanionSiteURLResponse" element="tns:getStudentCompanionSiteURLResponse" />
+  </message>
+  <message name="getInstructorCompanionSiteURL">
+    <part name="getURLParameters" element="tns:getInstructorCompanionSiteURL" />
+  </message>
+  <message name="getInstructorCompanionSiteURLResponse">
+    <part name="getInstructorCompanionSiteURLResponse" element="tns:getInstructorCompanionSiteURLResponse" />
+  </message>
+  <message name="getBookSiteURL">
+    <part name="getURLParameters" element="tns:getBookSiteURL" />
+  </message>
+  <message name="getBookSiteURLResponse">
+    <part name="getBookSiteURLResponse" element="tns:getBookSiteURLResponse" />
+  </message>
+  <message name="internalOptInReporting">
+    <part name="internalOptInReportingParameters" element="tns:internalOptInReporting" />
+  </message>
+  <message name="internalOptInReportingResponse">
+    <part name="internalOptInReportingResponse" element="tns:internalOptInReportingResponse" />
+  </message>
+  <message name="postCourse">
+    <part name="postCourseParameters" element="tns:postCourse" />
+  </message>
+  <message name="postCourseResponse">
+    <part name="postCourseResponse" element="tns:postCourseResponse" />
+  </message>
+  <message name="getCourse">
+    <part name="getCourseParameters" element="tns:getCourse" />
+  </message>
+  <message name="getCourseResponse">
+    <part name="getCourseResponse" element="tns:getCourseResponse" />
+  </message>
+  <message name="postEnrollment">
+    <part name="postEnrollmentParameters" element="tns:postEnrollment" />
+  </message>
+  <message name="postEnrollmentResponse">
+    <part name="postEnrollmentResponse" element="tns:postEnrollmentResponse" />
+  </message>
+  <message name="postEnrollmentInfo">
+    <part name="postEnrollmentInfoParameters" element="tns:postEnrollmentInfo" />
+  </message>
+  <message name="postEnrollmentInfoResponse">
+    <part name="postEnrollmentInfoResponse" element="tns:postEnrollmentInfoResponse" />
+  </message>
+  <message name="transferEnrollment">
+    <part name="transferEnrollmentParameters" element="tns:transferEnrollment" />
+  </message>
+  <message name="transferEnrollmentResponse">
+    <part name="transferEnrollmentResponse" element="tns:transferEnrollmentResponse" />
+  </message>
+  <message name="getEnrollments">
+    <part name="getEnrollmentsParameters" element="tns:getEnrollments" />
+  </message>
+  <message name="getEnrollmentsResponse">
+    <part name="getEnrollmentsResponse" element="tns:getEnrollmentsResponse" />
+  </message>
+  <portType name="OLRwsPort">
+    <operation name="getResource">
+      <input message="tns:getResource" />
+      <output message="tns:getResourceResponse" />
+    </operation>
+    <operation name="rename">
+      <input message="tns:rename" />
+      <output message="tns:renameResponse" />
+    </operation>
+    <operation name="getVersion">
+      <input message="tns:getVersion" />
+      <output message="tns:getVersionResponse" />
+    </operation>
+    <operation name="createResource">
+      <input message="tns:createResource" />
+      <output message="tns:createResourceResponse" />
+    </operation>
+    <operation name="getToken">
+      <input message="tns:getToken" />
+      <output message="tns:getTokenResponse" />
+    </operation>
+    <operation name="getComponents">
+      <input message="tns:getComponents" />
+      <output message="tns:getComponentsResponse" />
+    </operation>
+    <operation name="getTitle">
+      <input message="tns:getTitle" />
+      <output message="tns:getTitleResponse" />
+    </operation>
+    <operation name="getProduct">
+      <input message="tns:getProduct" />
+      <output message="tns:getProductResponse" />
+    </operation>
+    <operation name="consumeAccessCode">
+      <input message="tns:consumeAccessCode" />
+      <output message="tns:consumeAccessCodeResponse" />
+    </operation>
+    <operation name="entitleFreeAccess">
+      <input message="tns:entitleFreeAccess" />
+      <output message="tns:entitleFreeAccessResponse" />
+    </operation>
+    <operation name="getAccessCode">
+      <input message="tns:getAccessCode" />
+      <output message="tns:getAccessCodeResponse" />
+    </operation>
+    <operation name="generateAccessCode">
+      <input message="tns:generateAccessCode" />
+      <output message="tns:generateAccessCodeResponse" />
+    </operation>
+    <operation name="resetAccessCode">
+      <input message="tns:resetAccessCode" />
+      <output message="tns:resetAccessCodeResponse" />
+    </operation>
+    <operation name="removeUserEntitlement">
+      <input message="tns:removeUserEntitlement" />
+      <output message="tns:removeUserEntitlementResponse" />
+    </operation>
+    <operation name="getUsersAccessCodeList">
+      <input message="tns:getUsersAccessCodeList" />
+      <output message="tns:getUsersAccessCodeListResponse" />
+    </operation>
+    <operation name="getUsersProductList">
+      <input message="tns:getUsersProductList" />
+      <output message="tns:getUsersProductListResponse" />
+    </operation>
+    <operation name="createProduct">
+      <input message="tns:createProduct" />
+      <output message="tns:createProductResponse" />
+    </operation>
+    <operation name="modifyProduct">
+      <input message="tns:modifyProduct" />
+      <output message="tns:modifyProductResponse" />
+    </operation>
+    <operation name="modifyResource">
+      <input message="tns:modifyResource" />
+      <output message="tns:modifyResourceResponse" />
+    </operation>
+    <operation name="postPhysicalFulfillment">
+      <input message="tns:postPhysicalFulfillment" />
+      <output message="tns:postPhysicalFulfillmentResponse" />
+    </operation>
+    <operation name="getEntitlements">
+      <input message="tns:getEntitlements" />
+      <output message="tns:getEntitlementsResponse" />
+    </operation>
+    <operation name="testTimeOut">
+      <input message="tns:testTimeOut" />
+      <output message="tns:testTimeOutResponse" />
+    </operation>
+    <operation name="getTimeOuts">
+      <input message="tns:getTimeOuts" />
+      <output message="tns:getTimeOutsResponse" />
+    </operation>
+    <operation name="getStudentCompanionSiteURL">
+      <input message="tns:getStudentCompanionSiteURL" />
+      <output message="tns:getStudentCompanionSiteURLResponse" />
+    </operation>
+    <operation name="getInstructorCompanionSiteURL">
+      <input message="tns:getInstructorCompanionSiteURL" />
+      <output message="tns:getInstructorCompanionSiteURLResponse" />
+    </operation>
+    <operation name="getBookSiteURL">
+      <input message="tns:getBookSiteURL" />
+      <output message="tns:getBookSiteURLResponse" />
+    </operation>
+    <operation name="internalOptInReporting">
+      <input message="tns:internalOptInReporting" />
+      <output message="tns:internalOptInReportingResponse" />
+    </operation>
+    <operation name="postCourse">
+      <input message="tns:postCourse" />
+      <output message="tns:postCourseResponse" />
+    </operation>
+    <operation name="getCourse">
+      <input message="tns:getCourse" />
+      <output message="tns:getCourseResponse" />
+    </operation>
+    <operation name="postEnrollment">
+      <input message="tns:postEnrollment" />
+      <output message="tns:postEnrollmentResponse" />
+    </operation>
+    <operation name="postEnrollmentInfo">
+      <input message="tns:postEnrollmentInfo" />
+      <output message="tns:postEnrollmentInfoResponse" />
+    </operation>
+    <operation name="transferEnrollment">
+      <input message="tns:transferEnrollment" />
+      <output message="tns:transferEnrollmentResponse" />
+    </operation>
+    <operation name="getEnrollments">
+      <input message="tns:getEnrollments" />
+      <output message="tns:getEnrollmentsResponse" />
+    </operation>
+  </portType>
+  <binding name="OLRwsPortBinding" type="tns:OLRwsPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getResource">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rename">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVersion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createResource">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComponents">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTitle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="consumeAccessCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="entitleFreeAccess">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccessCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generateAccessCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="resetAccessCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeUserEntitlement">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsersAccessCodeList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsersProductList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyResource">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postPhysicalFulfillment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getEntitlements">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="testTimeOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTimeOuts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getStudentCompanionSiteURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getInstructorCompanionSiteURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBookSiteURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="internalOptInReporting">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postCourse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCourse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postEnrollment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postEnrollmentInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="transferEnrollment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getEnrollments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OLRws">
+    <port name="OLRwsPort" binding="tns:OLRwsPortBinding">
+      <soap:address location="http://s-ws.cengage.com:80/olrws/OLRws" />
+    </port>
+  </service>
+</definitions>

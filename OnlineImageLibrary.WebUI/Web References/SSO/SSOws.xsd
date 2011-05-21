@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://ws.thomsonlearning.com:80/ssows" xmlns:ns2="java:com.tl.ssows" xmlns:ns3="java:language_builtins.lang" targetNamespace="java:com.tl.ssows.parameters" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=4" namespace="http://ws.thomsonlearning.com:80/ssows" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=3" namespace="java:com.tl.ssows" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=1" namespace="java:language_builtins.lang" />
+  <xs:element name="ERightsId" type="xs:string" />
+  <xs:element name="adminToken" type="xs:string" />
+  <xs:element name="dn" type="xs:string" />
+  <xs:element name="getUniqueGroups" type="xs:boolean" />
+  <xs:element name="group" type="ns2:Groups" />
+  <xs:element name="groupCn" type="xs:string" />
+  <xs:element name="groupName" type="xs:string" />
+  <xs:element name="guid" type="xs:string" />
+  <xs:element name="hostNames" type="ns3:ArrayOfString" />
+  <xs:element name="hosts" type="ns3:ArrayOfString" />
+  <xs:element name="newUid" type="xs:string" />
+  <xs:element name="oldGuid" type="xs:string" />
+  <xs:element name="oldUid" type="xs:string" />
+  <xs:element name="password" type="xs:string" />
+  <xs:element name="path" type="xs:string" />
+  <xs:element name="person" type="ns1:TLPerson" />
+  <xs:element name="resourceItem" type="xs:string" />
+  <xs:element name="tlCrms8ContactId" type="xs:string" />
+  <xs:element name="token" type="xs:string" />
+  <xs:element name="uid" type="xs:string" />
+  <xs:element name="userToken" type="xs:string" />
+  <xs:element name="username" type="xs:string" />
+  <xs:element name="validatedInstructor" type="xs:string" />
+</xs:schema>

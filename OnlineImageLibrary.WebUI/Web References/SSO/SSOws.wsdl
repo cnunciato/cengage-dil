@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.thomsonlearning.com:80/ssows" name="SSOws" targetNamespace="http://ws.thomsonlearning.com:80/ssows" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=1" namespace="java:language_builtins.lang" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=2" namespace="java:com.tl.ssows.parameters" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=3" namespace="java:com.tl.ssows" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://s-ws.cengage.com:80/ssows/SSOws?xsd=4" namespace="http://ws.thomsonlearning.com:80/ssows" />
+    </xsd:schema>
+  </types>
+  <message name="rename">
+    <part name="renameParameters" element="tns:rename" />
+  </message>
+  <message name="renameResponse">
+    <part name="renameResponse" element="tns:renameResponse" />
+  </message>
+  <message name="getVersion" />
+  <message name="getVersionResponse">
+    <part name="getVersionResponse" element="tns:getVersionResponse" />
+  </message>
+  <message name="getUser">
+    <part name="getUserParameters" element="tns:getUser" />
+  </message>
+  <message name="getUserResponse">
+    <part name="getUserResponse" element="tns:getUserResponse" />
+  </message>
+  <message name="getToken">
+    <part name="getTokenParameters" element="tns:getToken" />
+  </message>
+  <message name="getTokenResponse">
+    <part name="getTokenResponse" element="tns:getTokenResponse" />
+  </message>
+  <message name="getGroup">
+    <part name="getGroupParameters" element="tns:getGroup" />
+  </message>
+  <message name="getGroupResponse">
+    <part name="getGroupResponse" element="tns:getGroupResponse" />
+  </message>
+  <message name="addUser">
+    <part name="addUserParameters" element="tns:addUser" />
+  </message>
+  <message name="addUserResponse">
+    <part name="addUserResponse" element="tns:addUserResponse" />
+  </message>
+  <message name="addGroup">
+    <part name="addGroupParameters" element="tns:addGroup" />
+  </message>
+  <message name="addGroupResponse">
+    <part name="addGroupResponse" element="tns:addGroupResponse" />
+  </message>
+  <message name="deleteUser">
+    <part name="deleteUserParameters" element="tns:deleteUser" />
+  </message>
+  <message name="deleteUserResponse">
+    <part name="deleteUserResponse" element="tns:deleteUserResponse" />
+  </message>
+  <message name="deleteGroup">
+    <part name="deleteGroupParameters" element="tns:deleteGroup" />
+  </message>
+  <message name="deleteGroupResponse">
+    <part name="deleteGroupResponse" element="tns:deleteGroupResponse" />
+  </message>
+  <message name="getUsers">
+    <part name="getUsersParameters" element="tns:getUsers" />
+  </message>
+  <message name="getUsersResponse">
+    <part name="getUsersResponse" element="tns:getUsersResponse" />
+  </message>
+  <message name="isMemberOf">
+    <part name="isMemberOfParameters" element="tns:isMemberOf" />
+  </message>
+  <message name="isMemberOfResponse">
+    <part name="isMemberOfResponse" element="tns:isMemberOfResponse" />
+  </message>
+  <message name="modifyUser">
+    <part name="modifyUserParameters" element="tns:modifyUser" />
+  </message>
+  <message name="modifyUserResponse">
+    <part name="modifyUserResponse" element="tns:modifyUserResponse" />
+  </message>
+  <message name="restrictionRemoveFromUser">
+    <part name="restrictionParameters" element="tns:restrictionRemoveFromUser" />
+  </message>
+  <message name="restrictionRemoveFromUserResponse">
+    <part name="restrictionRemoveFromUserResponse" element="tns:restrictionRemoveFromUserResponse" />
+  </message>
+  <message name="restrictionAddToUser">
+    <part name="restrictionParameters" element="tns:restrictionAddToUser" />
+  </message>
+  <message name="restrictionAddToUserResponse">
+    <part name="restrictionAddToUserResponse" element="tns:restrictionAddToUserResponse" />
+  </message>
+  <message name="hasAccessTo">
+    <part name="hasAccessToParameters" element="tns:hasAccessTo" />
+  </message>
+  <message name="hasAccessToResponse">
+    <part name="hasAccessToResponse" element="tns:hasAccessToResponse" />
+  </message>
+  <message name="doesUserExist">
+    <part name="doesUserExistParameters" element="tns:doesUserExist" />
+  </message>
+  <message name="doesUserExistResponse">
+    <part name="doesUserExistResponse" element="tns:doesUserExistResponse" />
+  </message>
+  <message name="modifyGroup">
+    <part name="modifyGroupParameters" element="tns:modifyGroup" />
+  </message>
+  <message name="modifyGroupResponse">
+    <part name="modifyGroupResponse" element="tns:modifyGroupResponse" />
+  </message>
+  <message name="isUrlProtected">
+    <part name="isUrlProtectedParameters" element="tns:isUrlProtected" />
+  </message>
+  <message name="isUrlProtectedResponse">
+    <part name="isUrlProtectedResponse" element="tns:isUrlProtectedResponse" />
+  </message>
+  <message name="validateToken">
+    <part name="string" element="tns:validateToken" />
+  </message>
+  <message name="validateTokenResponse">
+    <part name="validateTokenResponse" element="tns:validateTokenResponse" />
+  </message>
+  <message name="addUniqueMember">
+    <part name="addUniqueMemberParameters" element="tns:addUniqueMember" />
+  </message>
+  <message name="addUniqueMemberResponse">
+    <part name="addUniqueMemberResponse" element="tns:addUniqueMemberResponse" />
+  </message>
+  <message name="addResourceItem">
+    <part name="addResourceItemParameters" element="tns:addResourceItem" />
+  </message>
+  <message name="addResourceItemResponse">
+    <part name="addResourceItemResponse" element="tns:addResourceItemResponse" />
+  </message>
+  <message name="removeUniqueMember">
+    <part name="removeUniqueMemberParameters" element="tns:removeUniqueMember" />
+  </message>
+  <message name="removeUniqueMemberResponse">
+    <part name="removeUniqueMemberResponse" element="tns:removeUniqueMemberResponse" />
+  </message>
+  <message name="removeResourceItem">
+    <part name="removeResourceItemParameters" element="tns:removeResourceItem" />
+  </message>
+  <message name="removeResourceItemResponse">
+    <part name="removeResourceItemResponse" element="tns:removeResourceItemResponse" />
+  </message>
+  <message name="isInstructor">
+    <part name="isInstructorParameters" element="tns:isInstructor" />
+  </message>
+  <message name="isInstructorResponse">
+    <part name="isInstructorResponse" element="tns:isInstructorResponse" />
+  </message>
+  <message name="getTokenFromGuid">
+    <part name="getTokenFromGuidParameters" element="tns:getTokenFromGuid" />
+  </message>
+  <message name="getTokenFromGuidResponse">
+    <part name="getTokenFromGuidResponse" element="tns:getTokenFromGuidResponse" />
+  </message>
+  <message name="refreshToken">
+    <part name="refreshTokenParameters" element="tns:refreshToken" />
+  </message>
+  <message name="refreshTokenResponse">
+    <part name="refreshTokenResponse" element="tns:refreshTokenResponse" />
+  </message>
+  <message name="getGroupsProtecting">
+    <part name="string" element="tns:getGroupsProtecting" />
+  </message>
+  <message name="getGroupsProtectingResponse">
+    <part name="getGroupsProtectingResponse" element="tns:getGroupsProtectingResponse" />
+  </message>
+  <message name="getGroupsProtectingHostURL">
+    <part name="GetGroupsProtectingHostURLParameters" element="tns:getGroupsProtectingHostURL" />
+  </message>
+  <message name="getGroupsProtectingHostURLResponse">
+    <part name="GetGroupsProtectingHostURLResponse" element="tns:getGroupsProtectingHostURLResponse" />
+  </message>
+  <message name="testTimeOut">
+    <part name="integer" element="tns:testTimeOut" />
+  </message>
+  <message name="testTimeOutResponse">
+    <part name="testTimeOutResponse" element="tns:testTimeOutResponse" />
+  </message>
+  <message name="getUserPasswordResetKey">
+    <part name="passwordResetKeyParameters" element="tns:getUserPasswordResetKey" />
+  </message>
+  <message name="getUserPasswordResetKeyResponse">
+    <part name="getUserPasswordResetKeyResponse" element="tns:getUserPasswordResetKeyResponse" />
+  </message>
+  <message name="deactivateInstructor">
+    <part name="deactivateInstructorParameters" element="tns:deactivateInstructor" />
+  </message>
+  <message name="deactivateInstructorResponse">
+    <part name="deactivateInstructorResponse" element="tns:deactivateInstructorResponse" />
+  </message>
+  <message name="reactivateInstructor">
+    <part name="reactivateInstructorParameters" element="tns:reactivateInstructor" />
+  </message>
+  <message name="reactivateInstructorResponse">
+    <part name="reactivateInstructorResponse" element="tns:reactivateInstructorResponse" />
+  </message>
+  <message name="suspendInstructor">
+    <part name="crmsParameters" element="tns:suspendInstructor" />
+  </message>
+  <message name="suspendInstructorResponse">
+    <part name="suspendInstructorResponse" element="tns:suspendInstructorResponse" />
+  </message>
+  <message name="validatedInstructor">
+    <part name="validatedInstructorParameters" element="tns:validatedInstructor" />
+  </message>
+  <message name="validatedInstructorResponse">
+    <part name="validatedInstructorResponse" element="tns:validatedInstructorResponse" />
+  </message>
+  <message name="getDirectGroupMembership">
+    <part name="getDirectGroupMembershipParameters" element="tns:getDirectGroupMembership" />
+  </message>
+  <message name="getDirectGroupMembershipResponse">
+    <part name="getDirectGroupMembershipResponse" element="tns:getDirectGroupMembershipResponse" />
+  </message>
+  <portType name="SSOwsPort">
+    <operation name="rename">
+      <input message="tns:rename" />
+      <output message="tns:renameResponse" />
+    </operation>
+    <operation name="getVersion">
+      <input message="tns:getVersion" />
+      <output message="tns:getVersionResponse" />
+    </operation>
+    <operation name="getUser">
+      <input message="tns:getUser" />
+      <output message="tns:getUserResponse" />
+    </operation>
+    <operation name="getToken">
+      <input message="tns:getToken" />
+      <output message="tns:getTokenResponse" />
+    </operation>
+    <operation name="getGroup">
+      <input message="tns:getGroup" />
+      <output message="tns:getGroupResponse" />
+    </operation>
+    <operation name="addUser">
+      <input message="tns:addUser" />
+      <output message="tns:addUserResponse" />
+    </operation>
+    <operation name="addGroup">
+      <input message="tns:addGroup" />
+      <output message="tns:addGroupResponse" />
+    </operation>
+    <operation name="deleteUser">
+      <input message="tns:deleteUser" />
+      <output message="tns:deleteUserResponse" />
+    </operation>
+    <operation name="deleteGroup">
+      <input message="tns:deleteGroup" />
+      <output message="tns:deleteGroupResponse" />
+    </operation>
+    <operation name="getUsers">
+      <input message="tns:getUsers" />
+      <output message="tns:getUsersResponse" />
+    </operation>
+    <operation name="isMemberOf">
+      <input message="tns:isMemberOf" />
+      <output message="tns:isMemberOfResponse" />
+    </operation>
+    <operation name="modifyUser">
+      <input message="tns:modifyUser" />
+      <output message="tns:modifyUserResponse" />
+    </operation>
+    <operation name="restrictionRemoveFromUser">
+      <input message="tns:restrictionRemoveFromUser" />
+      <output message="tns:restrictionRemoveFromUserResponse" />
+    </operation>
+    <operation name="restrictionAddToUser">
+      <input message="tns:restrictionAddToUser" />
+      <output message="tns:restrictionAddToUserResponse" />
+    </operation>
+    <operation name="hasAccessTo">
+      <input message="tns:hasAccessTo" />
+      <output message="tns:hasAccessToResponse" />
+    </operation>
+    <operation name="doesUserExist">
+      <input message="tns:doesUserExist" />
+      <output message="tns:doesUserExistResponse" />
+    </operation>
+    <operation name="modifyGroup">
+      <input message="tns:modifyGroup" />
+      <output message="tns:modifyGroupResponse" />
+    </operation>
+    <operation name="isUrlProtected">
+      <input message="tns:isUrlProtected" />
+      <output message="tns:isUrlProtectedResponse" />
+    </operation>
+    <operation name="validateToken">
+      <input message="tns:validateToken" />
+      <output message="tns:validateTokenResponse" />
+    </operation>
+    <operation name="addUniqueMember">
+      <input message="tns:addUniqueMember" />
+      <output message="tns:addUniqueMemberResponse" />
+    </operation>
+    <operation name="addResourceItem">
+      <input message="tns:addResourceItem" />
+      <output message="tns:addResourceItemResponse" />
+    </operation>
+    <operation name="removeUniqueMember">
+      <input message="tns:removeUniqueMember" />
+      <output message="tns:removeUniqueMemberResponse" />
+    </operation>
+    <operation name="removeResourceItem">
+      <input message="tns:removeResourceItem" />
+      <output message="tns:removeResourceItemResponse" />
+    </operation>
+    <operation name="isInstructor">
+      <input message="tns:isInstructor" />
+      <output message="tns:isInstructorResponse" />
+    </operation>
+    <operation name="getTokenFromGuid">
+      <input message="tns:getTokenFromGuid" />
+      <output message="tns:getTokenFromGuidResponse" />
+    </operation>
+    <operation name="refreshToken">
+      <input message="tns:refreshToken" />
+      <output message="tns:refreshTokenResponse" />
+    </operation>
+    <operation name="getGroupsProtecting">
+      <input message="tns:getGroupsProtecting" />
+      <output message="tns:getGroupsProtectingResponse" />
+    </operation>
+    <operation name="getGroupsProtectingHostURL">
+      <input message="tns:getGroupsProtectingHostURL" />
+      <output message="tns:getGroupsProtectingHostURLResponse" />
+    </operation>
+    <operation name="testTimeOut">
+      <input message="tns:testTimeOut" />
+      <output message="tns:testTimeOutResponse" />
+    </operation>
+    <operation name="getUserPasswordResetKey">
+      <input message="tns:getUserPasswordResetKey" />
+      <output message="tns:getUserPasswordResetKeyResponse" />
+    </operation>
+    <operation name="deactivateInstructor">
+      <input message="tns:deactivateInstructor" />
+      <output message="tns:deactivateInstructorResponse" />
+    </operation>
+    <operation name="reactivateInstructor">
+      <input message="tns:reactivateInstructor" />
+      <output message="tns:reactivateInstructorResponse" />
+    </operation>
+    <operation name="suspendInstructor">
+      <input message="tns:suspendInstructor" />
+      <output message="tns:suspendInstructorResponse" />
+    </operation>
+    <operation name="validatedInstructor">
+      <input message="tns:validatedInstructor" />
+      <output message="tns:validatedInstructorResponse" />
+    </operation>
+    <operation name="getDirectGroupMembership">
+      <input message="tns:getDirectGroupMembership" />
+      <output message="tns:getDirectGroupMembershipResponse" />
+    </operation>
+  </portType>
+  <binding name="SSOwsPortBinding" type="tns:SSOwsPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="rename">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVersion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isMemberOf">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="restrictionRemoveFromUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="restrictionAddToUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hasAccessTo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="doesUserExist">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyGroup">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isUrlProtected">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addUniqueMember">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addResourceItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeUniqueMember">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeResourceItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isInstructor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTokenFromGuid">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="refreshToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupsProtecting">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupsProtectingHostURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="testTimeOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserPasswordResetKey">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deactivateInstructor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reactivateInstructor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="suspendInstructor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validatedInstructor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDirectGroupMembership">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SSOws">
+    <port name="SSOwsPort" binding="tns:SSOwsPortBinding">
+      <soap:address location="http://s-ws.cengage.com:80/ssows/SSOws" />
+    </port>
+  </service>
+</definitions>

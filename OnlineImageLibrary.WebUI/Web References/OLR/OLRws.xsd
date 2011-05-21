@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="java:com.tl.olrws.parameters" xmlns:tns="http://ws.thomsonlearning.com:80/olrws" xmlns:ns2="java:com.tl.olrws" xmlns:ns3="java:language_builtins.lang" targetNamespace="http://ws.thomsonlearning.com:80/olrws" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=2" namespace="java:com.tl.olrws.parameters" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=3" namespace="java:com.tl.olrws" />
+  <xs:import schemaLocation="http://s-ws.cengage.com:80/olrws/OLRws?xsd=1" namespace="java:language_builtins.lang" />
+  <xs:element name="consumeAccessCode" nillable="true" type="tns:consumeAccessCodeParameters" />
+  <xs:element name="consumeAccessCodeResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="createProduct" nillable="true" type="tns:createProductParameters" />
+  <xs:element name="createProductResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="createResource" nillable="true" type="tns:createResourceParameters" />
+  <xs:element name="createResourceResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="entitleFreeAccess" nillable="true" type="tns:entitleFreeAccessParameters" />
+  <xs:element name="entitleFreeAccessResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="generateAccessCode" nillable="true" type="tns:generateAccessCodeParameters" />
+  <xs:element name="generateAccessCodeResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getAccessCode" nillable="true" type="tns:getAccessCodeParameters" />
+  <xs:element name="getAccessCodeResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getBookSiteURL" nillable="true" type="tns:getURLParameters" />
+  <xs:element name="getBookSiteURLResponse" nillable="true" type="xs:string" />
+  <xs:element name="getComponents" nillable="true" type="tns:getComponentsParameters" />
+  <xs:element name="getComponentsResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getCourse" nillable="true" type="tns:GetCourseParameters" />
+  <xs:element name="getCourseResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getEnrollments" nillable="true" type="tns:GetEnrollmentsParameters" />
+  <xs:element name="getEnrollmentsResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getEntitlements" nillable="true" type="tns:getEntitlementParameters" />
+  <xs:element name="getEntitlementsResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getInstructorCompanionSiteURL" nillable="true" type="tns:getURLParameters" />
+  <xs:element name="getInstructorCompanionSiteURLResponse" nillable="true" type="xs:string" />
+  <xs:element name="getProduct" nillable="true" type="tns:getProductParameters" />
+  <xs:element name="getProductResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getResource" nillable="true" type="tns:getResourceParameters" />
+  <xs:element name="getResourceResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getStudentCompanionSiteURL" nillable="true" type="tns:getURLParameters" />
+  <xs:element name="getStudentCompanionSiteURLResponse" nillable="true" type="xs:string" />
+  <xs:element name="getTimeOuts" nillable="true" type="tns:getTimeOutsParameters" />
+  <xs:element name="getTimeOutsResponse" nillable="true" type="tns:arrayOfWebServiceOperation" />
+  <xs:element name="getTitle" nillable="true" type="tns:GetTitleParameters" />
+  <xs:element name="getTitleResponse" nillable="true" type="tns:title" />
+  <xs:element name="getToken" nillable="true" type="tns:getTokenParameters" />
+  <xs:element name="getTokenResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getUsersAccessCodeList" nillable="true" type="tns:getUsersAccessCodeListParameters" />
+  <xs:element name="getUsersAccessCodeListResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getUsersProductList" nillable="true" type="tns:getUsersProductListParameters" />
+  <xs:element name="getUsersProductListResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="getVersionResponse" nillable="true" type="xs:string" />
+  <xs:element name="internalOptInReporting" nillable="true" type="tns:internalOptInReportingParameters" />
+  <xs:element name="internalOptInReportingResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="modifyProduct" nillable="true" type="tns:modifyProductParameters" />
+  <xs:element name="modifyProductResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="modifyResource" nillable="true" type="tns:modifyResourceParameters" />
+  <xs:element name="modifyResourceResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="postCourse" nillable="true" type="tns:PostCourseParameters" />
+  <xs:element name="postCourseResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="postEnrollment" nillable="true" type="tns:PostEnrollmentParameters" />
+  <xs:element name="postEnrollmentInfo" nillable="true" type="tns:PostEnrollmentInfoParameters" />
+  <xs:element name="postEnrollmentInfoResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="postEnrollmentResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="postPhysicalFulfillment" nillable="true" type="tns:PostPhysicalFulfillmentParameters" />
+  <xs:element name="postPhysicalFulfillmentResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="removeUserEntitlement" nillable="true" type="tns:removeUserEntitlementParameters" />
+  <xs:element name="removeUserEntitlementResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="rename" nillable="true" type="tns:renameParameters" />
+  <xs:element name="renameResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="resetAccessCode" nillable="true" type="tns:resetAccessCodeParameters" />
+  <xs:element name="resetAccessCodeResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="testTimeOut" nillable="true" type="xs:int" />
+  <xs:element name="testTimeOutResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:element name="transferEnrollment" nillable="true" type="tns:TransferEnrollmentParameters" />
+  <xs:element name="transferEnrollmentResponse" nillable="true" type="tns:OLRwsResult" />
+  <xs:complexType name="getURLParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:epi" />
+      <xs:element ref="ns1:isbn10" />
+      <xs:element ref="ns1:isbn13" />
+      <xs:element ref="ns1:token" />
+      <xs:element minOccurs="0" ref="ns1:region" />
+      <xs:element minOccurs="0" ref="ns1:userType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsersAccessCodeListParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OLRwsResult">
+    <xs:sequence>
+      <xs:element ref="ns2:accessCode" />
+      <xs:element ref="ns2:accessCodes" />
+      <xs:element ref="ns2:components" />
+      <xs:element ref="ns2:entitlement" />
+      <xs:element ref="ns2:guid" />
+      <xs:element ref="ns2:pid" />
+      <xs:element minOccurs="0" name="products" type="tns:arrayOfProduct" />
+      <xs:element ref="ns2:resourceId" />
+      <xs:element ref="ns2:resources" />
+      <xs:element ref="ns2:resultCode" />
+      <xs:element ref="ns2:resultDescription" />
+      <xs:element ref="ns2:token" />
+      <xs:element ref="ns2:uid" />
+      <xs:element ref="ns2:enrollments" />
+      <xs:element ref="ns2:courses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfAccessCode">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:AccessCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accessCode">
+    <xs:sequence>
+      <xs:element ref="ns2:accessCode" />
+      <xs:element ref="ns2:consumedFlag" />
+      <xs:element ref="ns2:ERightsCouponId" />
+      <xs:element ref="ns2:expectedLifeDate" />
+      <xs:element ref="ns2:expirationDate" />
+      <xs:element ref="ns2:guid" />
+      <xs:element ref="ns2:partId" />
+      <xs:element ref="ns2:pid" />
+      <xs:element ref="ns2:productNotifyFlag" />
+      <xs:element ref="ns2:reclaimsAllowed" />
+      <xs:element ref="ns2:redemptionCeiling" />
+      <xs:element ref="ns2:registrationDate" />
+      <xs:element ref="ns2:uid" />
+      <xs:element ref="ns2:isbns" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfISBN">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:isbn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isbn">
+    <xs:sequence>
+      <xs:element ref="ns2:isbn10" />
+      <xs:element ref="ns2:isbn13" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfComponent">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:Component" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="component">
+    <xs:sequence>
+      <xs:element ref="ns2:compId" />
+      <xs:element ref="ns2:defaultSubscriptionLength" />
+      <xs:element ref="ns2:pid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entitlements">
+    <xs:sequence>
+      <xs:element ref="ns2:guid" />
+      <xs:element ref="ns2:titles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfTitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="title" nillable="true" type="tns:title" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="title">
+    <xs:sequence>
+      <xs:element ref="ns2:author" />
+      <xs:element ref="ns2:authorLastName" />
+      <xs:element ref="ns2:companionSiteURL" />
+      <xs:element ref="ns2:edition" />
+      <xs:element ref="ns2:epi" />
+      <xs:element ref="ns2:freeChapterURL" />
+      <xs:element ref="ns2:iacIsbn" />
+      <xs:element ref="ns2:instructorSiteURL" />
+      <xs:element ref="ns2:isbn10" />
+      <xs:element ref="ns2:isbn13" />
+      <xs:element ref="ns2:ldapGroup" />
+      <xs:element ref="ns2:pages" />
+      <xs:element ref="ns2:products" />
+      <xs:element ref="ns2:title" />
+      <xs:element ref="ns2:url" />
+      <xs:element ref="ns2:registrationDate" />
+      <xs:element ref="ns2:freeChapterName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfEntitlementProduct">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:EntitlementProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entitlementProduct">
+    <xs:sequence>
+      <xs:element ref="ns2:comingSoon" />
+      <xs:element ref="ns2:course" />
+      <xs:element ref="ns2:epi" />
+      <xs:element ref="ns2:expirationDate" />
+      <xs:element ref="ns2:ilrnBookCode" />
+      <xs:element ref="ns2:isbn10" />
+      <xs:element ref="ns2:isbn13" />
+      <xs:element ref="ns2:productType" />
+      <xs:element ref="ns2:registrationDate" />
+      <xs:element ref="ns2:title" />
+      <xs:element ref="ns2:url" />
+      <xs:element ref="ns2:contextId" />
+      <xs:element ref="ns2:paidInFull" />
+      <xs:element minOccurs="0" ref="ns2:state" />
+      <xs:element minOccurs="0" ref="ns2:alternateUrl" />
+      <xs:element minOccurs="0" ref="ns2:discountedTextbookAvailable" />
+      <xs:element ref="ns2:pubcoSn" />
+      <xs:element ref="ns2:iacIsbn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfProduct">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:Product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element ref="ns2:accessUrl" />
+      <xs:element ref="ns2:components" />
+      <xs:element ref="ns2:course" />
+      <xs:element ref="ns2:createDate" />
+      <xs:element ref="ns2:createdBy" />
+      <xs:element ref="ns2:defaultSubscriptionLength" />
+      <xs:element ref="ns2:downloadSite" />
+      <xs:element ref="ns2:email" />
+      <xs:element ref="ns2:epi" />
+      <xs:element ref="ns2:faqUrl" />
+      <xs:element ref="ns2:ldapGroup" />
+      <xs:element ref="ns2:notes" />
+      <xs:element ref="ns2:partNumber" />
+      <xs:element ref="ns2:phone" />
+      <xs:element ref="ns2:pid" />
+      <xs:element ref="ns2:productAttributes" />
+      <xs:element ref="ns2:productId" />
+      <xs:element ref="ns2:productName" />
+      <xs:element ref="ns2:productType" />
+      <xs:element ref="ns2:pubcoId" />
+      <xs:element ref="ns2:publisherName" />
+      <xs:element ref="ns2:registrationUrl" />
+      <xs:element ref="ns2:resources" />
+      <xs:element ref="ns2:showFaqOnEmail" />
+      <xs:element ref="ns2:showFaqOnWeb" />
+      <xs:element ref="ns2:signatureUrl" />
+      <xs:element ref="ns2:smLastSealedDate" />
+      <xs:element ref="ns2:snPartId" />
+      <xs:element ref="ns2:userIdType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfProductAttribute">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:ProductAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productAttribute">
+    <xs:sequence>
+      <xs:element ref="ns2:pid" />
+      <xs:element ref="ns2:typeId" />
+      <xs:element ref="ns2:value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfResource">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns2:Resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resource">
+    <xs:sequence>
+      <xs:element ref="ns2:denial" />
+      <xs:element ref="ns2:ldapGroupName" />
+      <xs:element ref="ns2:login" />
+      <xs:element ref="ns2:pid" />
+      <xs:element ref="ns2:pubcoId" />
+      <xs:element ref="ns2:resourceId" />
+      <xs:element ref="ns2:resourceItems" />
+      <xs:element ref="ns2:resourceName" />
+      <xs:element ref="ns2:host" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfString">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="ns3:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfEnrollment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns2:Enrollment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Enrollment">
+    <xs:sequence>
+      <xs:element ref="ns2:guid" />
+      <xs:element ref="ns2:contextId" />
+      <xs:element ref="ns2:paidInFull" />
+      <xs:element ref="ns2:paymentCode" />
+      <xs:element ref="ns2:enrollmentDate" />
+      <xs:element minOccurs="0" ref="ns2:blocked" />
+      <xs:element minOccurs="0" ref="ns2:withdrawn" />
+      <xs:element minOccurs="0" ref="ns2:gracePeriodEndDate" />
+      <xs:element minOccurs="0" ref="ns2:transferred" />
+      <xs:element minOccurs="0" ref="ns2:purchasedTextbook" />
+      <xs:element minOccurs="0" ref="ns2:cartKey" />
+      <xs:element minOccurs="0" ref="ns2:courseKey" />
+      <xs:element minOccurs="0" ref="ns2:orderNumber" />
+      <xs:element minOccurs="0" ref="ns2:userType" />
+      <xs:element minOccurs="0" ref="ns2:textbookCartKey" />
+      <xs:element minOccurs="0" ref="ns2:textbookOrderNumber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfCourseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns2:CourseInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CourseInfo">
+    <xs:sequence>
+      <xs:element ref="ns2:acceptCashPayment" />
+      <xs:element ref="ns2:acceptPaymentCode" />
+      <xs:element ref="ns2:apliaProductId" />
+      <xs:element ref="ns2:beginDate" />
+      <xs:element ref="ns2:contextId" />
+      <xs:element ref="ns2:courseKey" />
+      <xs:element ref="ns2:courseName" />
+      <xs:element ref="ns2:coursePrice" />
+      <xs:element ref="ns2:createdOn" />
+      <xs:element ref="ns2:emailRegexExpression" />
+      <xs:element ref="ns2:emailRegexPrompt" />
+      <xs:element minOccurs="0" ref="ns2:emailRegexErrorMessage" />
+      <xs:element ref="ns2:endDate" />
+      <xs:element ref="ns2:institutionEntityId" />
+      <xs:element ref="ns2:institutionName" />
+      <xs:element ref="ns2:instructorName" />
+      <xs:element ref="ns2:lastUpdatedOn" />
+      <xs:element ref="ns2:onlineProductIsbn" />
+      <xs:element ref="ns2:requiresEmailRegex" />
+      <xs:element ref="ns2:requiresEmailValidation" />
+      <xs:element ref="ns2:textbookAuthor" />
+      <xs:element ref="ns2:textbookEdition" />
+      <xs:element ref="ns2:textbookIsbn" />
+      <xs:element ref="ns2:textbookTitle" />
+      <xs:element minOccurs="0" ref="ns2:deleted" />
+      <xs:element minOccurs="0" ref="ns2:gracePeriod" />
+      <xs:element minOccurs="0" ref="ns2:instructorFirstName" />
+      <xs:element minOccurs="0" ref="ns2:instructorMiddleInitial" />
+      <xs:element minOccurs="0" ref="ns2:instructorLastName" />
+      <xs:element minOccurs="0" ref="ns2:discountedTextBookPrice" />
+      <xs:element minOccurs="0" ref="ns2:productType" />
+      <xs:element minOccurs="0" ref="ns2:instructorGuid" />
+      <xs:element minOccurs="0" ref="ns2:enrollmentCount" />
+      <xs:element minOccurs="0" ref="ns2:meetingTimes" />
+      <xs:element minOccurs="0" ref="ns2:isGatewayCourse" />
+      <xs:element minOccurs="0" ref="ns2:altOnlineProductIsbn" />
+      <xs:element minOccurs="0" ref="ns2:altCoursePrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PostEnrollmentParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:courseKey" />
+      <xs:element ref="ns2:paidInFull" />
+      <xs:element ref="ns2:orderNumber" />
+      <xs:element ref="ns2:paymentCode" />
+      <xs:element ref="ns2:cartKey" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getComponentsParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:pid" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PostCourseParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:courseInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCourseParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element minOccurs="0" ref="ns1:courseKey" />
+      <xs:element minOccurs="0" ref="ns1:contextId" />
+      <xs:element minOccurs="0" ref="ns1:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyResourceParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:resource" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="renameParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:newUid" />
+      <xs:element ref="ns1:oldUid" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAccessCodeParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:accessCode" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consumeAccessCodeParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:accessCode" />
+      <xs:element ref="ns1:partNumber" />
+      <xs:element ref="ns1:productNotifyFlag" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:user" />
+      <xs:element ref="ns1:userToken" />
+      <xs:element ref="ns1:expirationDate" />
+      <xs:element minOccurs="0" ref="ns1:coreTitleIsbn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element ref="ns2:address" />
+      <xs:element ref="ns2:age" />
+      <xs:element ref="ns2:checkPointAnswer" />
+      <xs:element ref="ns2:checkPointQuestion" />
+      <xs:element ref="ns2:city" />
+      <xs:element ref="ns2:country" />
+      <xs:element ref="ns2:emailAddress" />
+      <xs:element ref="ns2:firstName" />
+      <xs:element ref="ns2:gender" />
+      <xs:element ref="ns2:lastName" />
+      <xs:element ref="ns2:password" />
+      <xs:element ref="ns2:phoneNumber" />
+      <xs:element ref="ns2:productNotifyFlag" />
+      <xs:element ref="ns2:schoolOrCompany" />
+      <xs:element ref="ns2:stateOrProvince" />
+      <xs:element ref="ns2:thomsonNotifyFlag" />
+      <xs:element ref="ns2:uid" />
+      <xs:element ref="ns2:zipOrPostalCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createResourceParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:resource" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTimeOutsParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:operationName" />
+      <xs:element ref="ns1:webserviceName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayOfWebServiceOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="webServiceOperation" nillable="true" type="tns:webServiceOperation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="webServiceOperation">
+    <xs:sequence>
+      <xs:element ref="ns2:operationName" />
+      <xs:element ref="ns2:timeout" />
+      <xs:element ref="ns2:webServiceName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PostEnrollmentInfoParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:enrollment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resetAccessCodeParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:accessCode" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:partId" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTitleParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:isbn" />
+      <xs:element ref="ns1:epi" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResourceParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:name" />
+      <xs:element ref="ns1:pid" />
+      <xs:element ref="ns1:pubcoId" />
+      <xs:element ref="ns1:resourceId" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeUserEntitlementParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:productIsbn" />
+      <xs:element ref="ns1:titleIsbn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransferEnrollmentParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:guids" />
+      <xs:element ref="ns1:fromContextId" />
+      <xs:element ref="ns1:toContextId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyProductParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:product" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entitleFreeAccessParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:isbn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateAccessCodeParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:deiiveryMethod" />
+      <xs:element ref="ns1:deliveryTarget" />
+      <xs:element ref="ns1:epi" />
+      <xs:element ref="ns1:expectedLifeDate" />
+      <xs:element ref="ns1:pid" />
+      <xs:element ref="ns1:quantity" />
+      <xs:element ref="ns1:subscriptionLength" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEntitlementParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:adminToken" />
+      <xs:element ref="ns1:filter" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:uid" />
+      <xs:element ref="ns1:userToken" />
+      <xs:element minOccurs="0" ref="ns1:useApliaCommerce" />
+      <xs:element minOccurs="0" ref="ns1:region" />
+      <xs:element minOccurs="0" ref="ns1:userType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filter">
+    <xs:sequence>
+      <xs:element ref="ns2:filerValue" />
+      <xs:element ref="ns2:filterType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="internalOptInReportingParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:cengageOptIn" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:ichapOptIn" />
+      <xs:element ref="ns1:newUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsersProductListParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createProductParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:product" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PostPhysicalFulfillmentParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:adminToken" />
+      <xs:element ref="ns1:guid" />
+      <xs:element ref="ns1:soldTextbookEpis" />
+      <xs:element ref="ns1:cartId" />
+      <xs:element ref="ns1:orderNumber" />
+      <xs:element ref="ns1:transactionType" />
+      <xs:element minOccurs="0" ref="ns1:returned" />
+      <xs:element minOccurs="0" ref="ns1:isbn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:partNumber" />
+      <xs:element ref="ns1:partialProductId" />
+      <xs:element ref="ns1:pid" />
+      <xs:element ref="ns1:productId" />
+      <xs:element ref="ns1:pubcoId" />
+      <xs:element ref="ns1:title" />
+      <xs:element ref="ns1:titleIsbn" />
+      <xs:element ref="ns1:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTokenParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:password" />
+      <xs:element ref="ns1:uid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetEnrollmentsParameters">
+    <xs:sequence>
+      <xs:element ref="ns1:token" />
+      <xs:element ref="ns1:guid" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
